@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Tally Count</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <header class="header">
+      <h1 class="header__title">Tally Count</h1>
+    </header>
+    <aside class="controls">
+      <label>
+        <span>Display</span>
+        <select>
+          <option>Single</option>
+          <option>Multiple</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Counter</span>
+        <select>
+          <option>Counter 1</option>
+          <option>Counter 2</option>
+          <option>Counter 3</option>
+        </select>
+      </label>
+      <button class="">Settings</button>
+    </aside>
+    <main class="counter">
+      <input
+        class="counter__value"
+        data-key="number"
+        readonly
+        value="0"
+        label="number__display"
+      />
+      <div class="counter__actions">
+        <button
+          data-key="subtract"
+          class="counter__button counter__button_first"
+        >
+          -
+        </button>
+        <button data-key="add" class="counter__button">+</button>
+      </div>
+    </main>
+    <footer class="footer">
+      Inspired by
+      <a class="footer__Link" href="https://tallycount.app/">Tally Count</a>
+      Note that this is a merely a student practice project for learning
+      JavaScript.
+    </footer>
+
+    <script src="script.js" async defer></script>
+  </body>
+</html>
