@@ -2,6 +2,8 @@
   --color-green: #31c48d;
   --color-white: #fff;
   --color-dark-grey: #33333d;
+  --color-red-light: #e76464;
+  --color-red-dark: #ac2525;
   --color-medium-grey: #434350;
   --color-light-grey: #c2c5c9;
 }
@@ -21,6 +23,7 @@ body {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   height: 100%;
 }
@@ -41,6 +44,7 @@ body {
 
 .counter {
   background: var(--color-dark-grey);
+  max-width: 30rem;
 }
 
 .counter__value {
@@ -103,4 +107,12 @@ body {
 
 .footer__Link {
   color: var(--color-white);
+}
+
+/* error */
+
+.error {
+  padding: 2rem;
+  background: var(--color-red-light);
+  color: var(--color-red-dark);
 }
