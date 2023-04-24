@@ -1,6 +1,16 @@
 const MAX_NUMBER = 15;
 const MIN_NUMBER = -5;
 const STEP_AMOUNT = 5;
+
+const a = 123;
+const b = 321;
+/*
+console.log(a);
+console.log(typeof b);
+console.log(b.toString());
+console.log(a + b);
+ */
+
 /*
  *Use alt Q - to compress comments.
  *Lorem Ipsum is simply dummy text of the printing and typesetting industry.
