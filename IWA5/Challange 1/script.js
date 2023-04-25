@@ -34,9 +34,11 @@ if (location === "NAM" || location === "RSA") {
 if (location === "NK") {
   console.log(BANNED_WARNIN);
 }
-
+if (currency == "$") {
+  total = total / 18.32;
+}
 //If cart cost is more or equal than R1000 or $60 and based in South Africa or Namibia there shipping is free
-if (total >= 1000) {
+if (total >= 1000 || 60) {
   if (location === "NAM" || location === "RSA") {
     if (customers !== 1) {
       shipping = 0;
@@ -51,4 +53,4 @@ if (shipping === 0 && customers !== 1) {
 
 total = total + shipping;
 
-console.log("Price", currency, total);
+console.log("Price", currency, total.toFixed(2));
