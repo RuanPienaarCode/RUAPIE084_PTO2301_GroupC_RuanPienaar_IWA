@@ -11,7 +11,7 @@ const sarahNumber = "13";
 const sarahStreet = "William Close";
 const sarahPostal = "0310";
 
-// Only change below this line
+// Only change below this line --
 
 const leo = {
   name: leoName,
