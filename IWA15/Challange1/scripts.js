@@ -73,4 +73,5 @@ result.push(extractBiggest());
 result.push(extractBiggest());
 
 console.log(result);
+
 ////////////////////////////////////
