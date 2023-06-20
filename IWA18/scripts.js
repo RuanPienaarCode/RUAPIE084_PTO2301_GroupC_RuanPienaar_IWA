@@ -54,9 +54,44 @@ const handleAddToggle = (event) => {
     console.error("Add Order overlay not found");
   }
 };
+
 const handleAddSubmit = (event) => {
-  console.log("handleAddSubmit");
+  event.preventDefault();
+
+  const orderText = html.add.title.value;
+  const tableNumber = html.add.table.value;
+
+  if (orderText && tableNumber) {
+    // Add the order to the data
+    const order = {
+      text: orderText,
+      table: tableNumber,
+      status: "Ordered",
+      created: new Date(),
+    };
+
+    // Update the UI with the new order
+    const orderElement = view.createOrderHtml(order);
+    const column = html.other.grid.querySelector(
+      `[data-column="${tableNumber}"]`
+    ); // Find the column element
+
+    if (column) {
+      column.appendChild(orderElement);
+      updateOrderCount();
+      handleAddToggle(); // Close the overlay
+
+      // Add event listener to the new order for editing
+      orderElement.addEventListener("click", handleEditToggle);
+    } else {
+      console.log(`Column "${tableNumber}" not found.`);
+    }
+  } else {
+    alert("Please enter a title and select a table.");
+    console.log("No order added");
+  }
 };
+
 const handleEditToggle = (event) => {
   console.log("handleEditToggle");
 };
